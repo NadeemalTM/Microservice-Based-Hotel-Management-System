@@ -1,13 +1,13 @@
-package com.nsbm.group03.reservationManagementService;
+package com.nsbm.group03.roomManagementService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReservationManagementServiceApplication {
+public class RoomManagementServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReservationManagementServiceApplication.class, args);
+		SpringApplication.run(RoomManagementServiceApplication.class, args);
 	}
 
 }

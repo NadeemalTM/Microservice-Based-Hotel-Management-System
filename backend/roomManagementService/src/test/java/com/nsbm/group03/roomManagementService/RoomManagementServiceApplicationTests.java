@@ -1,10 +1,10 @@
-package com.nsbm.group03.reservationManagementService;
+package com.nsbm.group03.roomManagementService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ReservationManagementServiceApplicationTests {
+class RoomManagementServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

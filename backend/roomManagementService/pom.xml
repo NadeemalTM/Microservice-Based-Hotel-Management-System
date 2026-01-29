@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nsbm.group03</groupId>
-	<artifactId>reservationManagementService</artifactId>
+	<artifactId>roomManagementService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>reservationManagementService</name>
+	<name>roomManagementService</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

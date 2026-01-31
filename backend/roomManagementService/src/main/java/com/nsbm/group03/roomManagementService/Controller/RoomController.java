@@ -3,6 +3,8 @@ package com.nsbm.group03.roomManagementService.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,17 +20,13 @@ public class RoomController {
     private RoomService roomService;
     
     //views all rooms
-    @RequestMapping(value = "/all")
+    @GetMapping
     public  List<Room> getAllRooms() {
         return roomService.getAllRooms();
     }
-    //view available rooms
-    @RequestMapping(value = "/available")
-    public List<Room> getAvailableRooms() {
-        return roomService.getAvailableRooms();
-    }
+    
     //create a room
-    @RequestMapping
+    @PostMapping
     public Room createRoom(@RequestBody Room room) {
         return roomService.insertRoom(room);
     }

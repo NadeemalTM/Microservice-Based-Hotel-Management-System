@@ -1,12 +1,15 @@
 package com.nsbm.group03.roomManagementService.Entity;
 
+import java.util.UUID;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 
 @Entity
 public class Room {
 
-    @Id
+    @Id    
     private String roomId;
     private String roomNumber;
     private String roomType;
@@ -14,6 +17,10 @@ public class Room {
     private int capacity;
     private String status;
 
+    @PrePersist
+    public void generateId() {
+        this.roomId = UUID.randomUUID().toString();
+    }
     
     public Room() {
     }
@@ -26,6 +33,8 @@ public class Room {
         this.capacity = capacity;
         this.status = status;
     }
+
+    
 
     public String getRoomId() {
         return roomId;

@@ -1,9 +1,8 @@
 package com.nsbm.group03.inventoryManagementService.controller;
 
-import com.nsbm.group03.inventoryManagementService.entity.InventoryItem;
+import com.nsbm.group03.inventoryManagementService.dto.InventoryItemDTO;
 import com.nsbm.group03.inventoryManagementService.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,20 +14,18 @@ class InventoryController {
     private InventoryService inventoryService;
 
     @GetMapping
-    public List<InventoryItem> getInventory(){
+    public List<InventoryItemDTO> getInventory() {
         return inventoryService.getAllItem();
     }
 
     @PostMapping
-    public InventoryItem createItem(@RequestBody InventoryItem item){
+    public InventoryItemDTO createItem(@RequestBody InventoryItemDTO item) {
         return inventoryService.addItem(item);
     }
 
     @PutMapping("/{id}/consume")
-    public InventoryItem consumeItem(@PathVariable Long id, @RequestParam int amountUsed){
+    public InventoryItemDTO consumeItem(@PathVariable Long id, @RequestParam int amountUsed) {
         return inventoryService.updateStock(id, amountUsed);
     }
-
-
 
 }
